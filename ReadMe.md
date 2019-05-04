@@ -9,7 +9,8 @@
    ```
    - 下载脚本 [下载地址][2]
    - 将压缩包解压到纯英文路径下，运行文件夹下的run.bat即可开始使用
-
+#### 3. 使用说明
+   请查看GUI_main.py文件内容
 
 [1]: https://www.python.org/downloads/release
 [2]: https://github.com/alchemist1234/ParticleTracking/archive/master.zip

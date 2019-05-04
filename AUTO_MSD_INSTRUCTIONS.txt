@@ -1,0 +1,45 @@
+AUTOMATIC MSD GUI
+
+*Documentation for the automatic MSD GUI*
+
+This program returns the mean square displacement given a set of X, Y and optionally t (time) datapoints.
+
+--------------- PROCEDURE ---------------------
+
+1- Make a spreadsheet file with two to three columns: the first and second ones must be the X and Y positions, with the first row being a capital "X" or a capital "Y". If there's time datapoints add a third column with a lowercase letter "t" on the first row.
+
+| X | Y | t |
+| 2 | 3 | 0.5|
+| 2 | 4 | 2.5 |
+| 3 | 6 | 3 |
+...
+
+2- Save the file as ".csv" (comma delimited)
+
+3- Run the program, selecting the file (more info on the options below)
+
+4- A new .csv file with an added ending "_MSD.csv" will appear, with the displacement and the MSD in the third and fourth columns, respectively.
+
+
+--------------- GUI PARAMETERS ---------------------
+
+If your set of datapoints are taken at the same time intervals then no parameters are needed. 
+
+If your set of datapoints are not taken at the same time intervals then a different procedure is done to calculate the MSD:
+
+-The positions are first interpolated with a continuous function
+-The continuous function is sampled at equal time intervals
+-Finally the MSD is calculated from the sampled datapoints
+
+The different parameters are:
+
+-Type of interpolation: spline or linear. Linear is less accurate but less prone to errors, spline is smoother and more "natural" but can fail more easily.
+
+
+-Number of points: amount of samples taken from the interpolation.
+
+-Show figure: shows the plot of the interpolated data (good to check if there's been some mistakes in the interpolation)
+
+
+
+

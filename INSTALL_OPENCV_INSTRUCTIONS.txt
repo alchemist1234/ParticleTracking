@@ -1,0 +1,34 @@
+TRACKING CODES IN WINDOWS
+
+1- Install latest 2.7.X python version (you can install a distribution package like python-xy which does the next step automatically)
+	Python-xy: https://code.google.com/p/pythonxy/wiki/Downloads
+
+2- Get the scipy, numpy and matplotlib libraries (if you've installed python-xy they should be already in the computer)
+
+3- Download the 3.0 BETA version of OpenCV for windows (http://opencv.org/downloads.html)
+
+4- Execute the file and extract in a suitable place (for example, the same folder in which the python27 folder is, usually C:\)
+
+5- Go to the extracted folder, to \opencv\build\python\2.7 and copy the cv2.pyd file (select x64 or x86 depending on the python version, 64bit or 32bit respectively)
+	-If you don't know which version is it then just use x86
+
+6- Paste it into \Python27\Lib\site-packages (the Python27 folder is usually in "C:\")
+
+7- Now everything should be installed in python. Try opening a terminal (search for "cmd" in windows), start python by typing "python" in the terminal and try to import the packages by running the following commands:
+	import numpy
+	import scipy
+	import matplotlib.pyplot
+	import cv2
+
+8- If no error occurs then it means everything has been installed fine. Try "cv2.__version__" to check that it's the correct one.
+
+9- In windows openCV's video codecs are problematic. To solve this, go to the opencv folder and to /sources/3rdparty/ffmpeg/
+
+10- Copy the files 'opencv_ffmpeg.dll' and 'opencv_ffmpeg_64.dll', and paste them in the /Python27/ folder, or to a folder that is in the windows PATH environment variable.
+
+11- Rename the copied files to 'opencv_ffmpeg300.dll' and 'opencv_ffmpeg300_64.dll'. This is for OpenCV version 3.0.0. Other versions should have the '300' replaced by the appropriate number.
+
+12- Now opening videos with the OpenCV commands is possible. Try to analyze the video using the provided codes. If you get an error of the type "Error opening file (../../modules/highgui/src/cap_ffmpeg_impl.hpp:545)' try the following:
+	*Rename the video file so that it starts with a capital letter or with an underscore ('_')
+	*Move the video to different folders (sometimes it doesn't work if the path is in the Desktop or to a folder that is not inside the current user)
+

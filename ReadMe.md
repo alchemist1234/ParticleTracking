@@ -12,4 +12,4 @@
 
 
 [1]: https://www.python.org/downloads/release
-[2]: https://github.com/alchemist1234/lab-manager/archive/master.zip
+[2]: https://github.com/alchemist1234/ParticleTracking/archive/master.zip

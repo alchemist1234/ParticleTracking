@@ -181,7 +181,7 @@ def class_factory_live(mode, *args, **kwargs):
                             makeNew = True
                             for particle in allParticles:
                                 part_center = dfun.get_prev_c(self.infoDict[particle, 'position'])[0]
-                                if cv2.pointPolygonTest(cnt, tuple(part_center), False) > -1:
+                                if cv2.pointPolygonTest(cnt, tuple([int(x) for x in part_center]), False) > -1:
                                     # Stop following the particle
                                     makeNew = False
                                     self.defunktParticles.add(particle)

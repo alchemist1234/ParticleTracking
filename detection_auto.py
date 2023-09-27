@@ -296,6 +296,7 @@ def class_factory(mode, *args, **kwargs):
                     if len(cnt_list_split) > 1:
                         # If more than two particles have been found, store them
                         for cnt in cnt_list_split:
+                            print(cnt)
                             M_list.append(cv2.moments(cnt))
                             cnt_list.append(cnt)
 
@@ -454,6 +455,7 @@ def class_factory(mode, *args, **kwargs):
                         self.activeDict[counter] = particle
                         counter += 1
             self.active = self.lastCenters.shape[0]  # Number of non-defunkt particles
+
 
         def particle_test(self, contour, split=True):
             # In this function we test whether or not the contour corresponds to a particle

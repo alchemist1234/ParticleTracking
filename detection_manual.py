@@ -41,7 +41,8 @@ def class_factory_manual(mode, *args, **kwargs):
             cv2.namedWindow('frame')
             cv2.setMouseCallback('frame', self.handle_mouse_event)
             self.searching = 'False'
-            cv2.destroyWindow('contour')
+
+            # cv2.destroyWindow('contour')
 
             # Parameters needed for tracking
             self.chm = 0  # Key pressed in manual mode
